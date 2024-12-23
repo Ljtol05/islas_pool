@@ -1,0 +1,315 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  /* Light blue background */
+  color: #333;
+  /* Dark text color */
+}
+
+.hero_img {
+  background-image: url('../images/new.jpg');
+  /* Use the relative path or absolute if needed */
+  background-size: cover;
+  /* Ensures the entire image is visible and maintains proportions */
+  background-attachment: fixed;
+  /* Creates a parallax effect */
+  background-position: center;
+  /* Centers the image */
+  height: 100vh;
+  /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  /* Needed for the overlay */
+}
+
+.hero_img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Darkens the image for better text visibility */
+  z-index: 1;
+  /* Ensures the overlay appears above the background */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  /* Ensures the content appears above the overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero_img img.logo {
+  max-height: 200px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Maintain aspect ratio */
+  margin-bottom: 30px;
+  /* Space between logo and heading */
+}
+
+.hero_img h1 {
+  font-family: 'Poppins', sans-serif;
+  /* Custom font for heading */
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  /* Creates a shadow for contrast */
+  z-index: 2;
+  /* Ensures the text appears above the overlay */
+  position: relative;
+  /* Needed for z-index to work */
+}
+
+/* Navbar general styles */
+.navbar {
+  background-color: #0077b6;
+  /* Deep water blue */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Adds slight depth */
+}
+
+.navbar-brand {
+  color: #ffffff;
+  /* White for contrast */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  /* Subtle text shadow */
+}
+
+/* Navbar brand logo */
+.navbar-brand img {
+  max-height: 75px;
+  /* Adjust the height as needed */
+  width: auto;
+  /* Maintain aspect ratio */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  /* White text */
+  font-size: 1.1rem;
+  /* Slightly larger text for readability */
+  margin: 0 0.5rem;
+  /* Add spacing between links */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #caf0f8;
+  /* Lighter blue hover effect */
+  text-decoration: underline;
+  /* Subtle underline on hover */
+}
+
+.navbar-toggler {
+  border-color: #caf0f8;
+  /* Lighter blue for the toggle border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(202, 240, 248, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  /* Light blue bars */
+}
+
+.navbar-collapse {
+  justify-content: center;
+  /* Centers the links */
+}
+
+/* Active and hover link styles */
+.nav-item.active .nav-link,
+.nav-item .nav-link:focus {
+  color: #caf0f8;
+  /* Highlight active link */
+  font-weight: bold;
+  border-bottom: 2px solid #caf0f8;
+  /* Adds an underline */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0077b6;
+  /* Pool-inspired blue */
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: #ffffff;
+  /* White background for cards */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow */
+}
+
+.service-icon {
+  width: 80px;
+  /* Icon size */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0077b6;
+  /* Consistent pool blue */
+  margin-top: 1rem;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+#services {
+  background-color: #f8f9fa;
+  /* Light grey background */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    /* Slightly smaller text on smaller screens */
+    margin: 0.5rem 0;
+    /* Add spacing for stacked layout */
+  }
+
+  .navbar-collapse {
+    text-align: center;
+    /* Aligns text for smaller screens */
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+
+  /* Navbar Styles */
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    /* Reduce font size for better readability */
+    margin: 0.3rem 0;
+    /* Adjust spacing for stacked layout */
+  }
+
+  .navbar-collapse {
+    text-align: center;
+    /* Center-align nav links */
+  }
+
+  .navbar-brand img {
+    max-height: 50px;
+    /* Scale down the navbar logo */
+  }
+
+  /* Hero Section */
+  .hero_img img.logo {
+    max-height: 120px;
+    /* Shrink logo for smaller screens */
+    margin-bottom: 15px;
+    /* Reduce spacing for smaller devices */
+  }
+
+  .hero_img h1 {
+    font-size: 2.5rem;
+    /* Reduce heading size */
+    margin-top: 15px;
+    /* Adjust spacing for readability */
+  }
+
+  .hero-content {
+    padding: 1rem;
+    /* Add padding for spacing */
+  }
+
+  /* Adjusting services section */
+  .service-card {
+    padding: 1rem;
+    /* Add internal padding for smaller cards */
+    margin-bottom: 20px;
+    /* Add space between cards */
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+    /* Slightly reduce title size */
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+    /* Adjust description size */
+  }
+
+  /* General Container Adjustments */
+  .container {
+    padding: 1rem;
+    /* Reduce padding for smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Further scaling for extra-small devices */
+  .hero_img img.logo {
+    max-height: 100px;
+    /* Further reduce logo size */
+  }
+
+  .hero_img h1 {
+    font-size: 1.8rem;
+    /* Scale down heading for smaller screens */
+  }
+
+  .hero-content {
+    padding: 0.5rem;
+    /* Tighten padding for smaller screens */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    /* Slightly smaller for compact devices */
+  }
+
+  /* Services section adjustments */
+  .service-card {
+    padding: 0.5rem;
+    /* Add compact padding */
+  }
+
+  .service-title {
+    font-size: 1rem;
+    /* Further reduce title size */
+  }
+
+  .service-description {
+    font-size: 0.8rem;
+    /* Adjust description size */
+  }
+}
