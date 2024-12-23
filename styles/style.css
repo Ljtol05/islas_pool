@@ -193,21 +193,6 @@ html {
   /* Light grey background */
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .navbar-nav .nav-link {
-    font-size: 1rem;
-    /* Slightly smaller text on smaller screens */
-    margin: 0.5rem 0;
-    /* Add spacing for stacked layout */
-  }
-
-  .navbar-collapse {
-    text-align: center;
-    /* Aligns text for smaller screens */
-  }
-}
-
 /* Responsive Tweaks */
 @media (max-width: 768px) {
 
@@ -230,6 +215,13 @@ html {
   }
 
   /* Hero Section */
+  .hero_img {
+    background: url('../styles/style.css') center/cover no-repeat;
+    height: 70vh;
+    /* Adjust the height for better fit on mobile */
+    background-attachment: scroll;
+  }
+    
   .hero_img img.logo {
     max-height: 120px;
     /* Shrink logo for smaller screens */
